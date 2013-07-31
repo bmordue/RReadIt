@@ -1,0 +1,29 @@
+<h1>Listing saved_tweets</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Tweet</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @saved_tweets.each do |saved_tweet| %>
+      <tr>
+        <td><%= saved_tweet.user_id %></td>
+        <td><%= saved_tweet.tweet_id %></td>
+        <td><%= link_to 'Show', saved_tweet %></td>
+        <td><%= link_to 'Edit', edit_saved_tweet_path(saved_tweet) %></td>
+        <td><%= link_to 'Destroy', saved_tweet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Saved tweet', new_saved_tweet_path %>

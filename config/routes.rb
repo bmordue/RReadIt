@@ -1,4 +1,6 @@
 RReadIt::Application.routes.draw do
+  resources :saved_tweets
+
   resources :users
 
   # The priority is based upon order of creation: first created -> highest priority.

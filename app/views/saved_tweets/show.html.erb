@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @saved_tweet.user_id %>
+</p>
+
+<p>
+  <strong>Tweet:</strong>
+  <%= @saved_tweet.tweet_id %>
+</p>
+
+<%= link_to 'Edit', edit_saved_tweet_path(@saved_tweet) %> |
+<%= link_to 'Back', saved_tweets_path %>
